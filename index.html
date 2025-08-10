@@ -16,7 +16,7 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
-            background: #0a0a0a;
+            background: #0f0f23;
         }
 
         /* Premium Glass Background */
@@ -27,10 +27,10 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.4) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(245, 87, 108, 0.4) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(79, 172, 254, 0.3) 0%, transparent 50%),
-                linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+                radial-gradient(circle at 20% 80%, rgba(59, 82, 190, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 69, 200, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(30, 60, 140, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #1a1a3e 0%, #2d2d5a 25%, #3e3e76 50%, #4a4a92 75%, #5656ae 100%);
             background-size: 400% 400%;
             animation: ultraGradientShift 20s ease infinite;
             z-index: -3;
@@ -44,8 +44,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 30%);
+                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 30%);
             backdrop-filter: blur(100px);
             z-index: -2;
         }
@@ -71,13 +71,13 @@
             text-align: center;
             margin-bottom: 50px;
             padding: 80px 40px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 40px;
             box-shadow: 
-                0 40px 80px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15),
-                inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+                0 40px 80px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(30px);
             position: relative;
             overflow: hidden;
@@ -86,11 +86,11 @@
         .header h1 {
             font-size: 3.5rem;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, #ffffff, #e8efff, #667eea, #764ba2);
+            background: linear-gradient(135deg, #e8f0ff, #c8d8ff, #8ba5ff, #6b7aff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
             position: relative;
             z-index: 1;
             font-weight: 800;
@@ -98,11 +98,11 @@
 
         .header .subtitle {
             font-size: 1.6rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 40px;
             font-weight: 300;
             line-height: 1.8;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
         }
 
         /* Experience Section */
@@ -671,7 +671,7 @@
     <script>
         // הגדרות Supabase (תצטרך להחליף עם הפרטים שלך)
         const SUPABASE_URL = 'https://jwgumccuvvvqzskqutmg.supabase.co';
-        const SUPABASE_ANON_KEY = ' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3Z3VtY2N1dnZ2cXpza3F1dG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ3OTc1NDQsImV4cCI6MjA3MDM3MzU0NH0.pypaRytqdgp7OOp4KC1b36bDUOvl5btkOZr0aH6uFLw';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3Z3VtY2N1dnZ2cXpza3F1dG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ3OTc1NDQsImV4cCI6MjA3MDM3MzU0NH0.pypaRytqdgp7OOp4KC1b36bDUOvl5btkOZr0aH6uFLw';
         
         // מערכת CRM מתקדמת עם Supabase
         let crmData = [];
@@ -680,10 +680,9 @@
         // בדיקה אם Supabase מוגדר
         if (SUPABASE_URL !== 'YOUR_SUPABASE_URL_HERE' && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY_HERE') {
             supabaseEnabled = true;
-            // טעינת Supabase
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-            document.head.appendChild(script);
+            console.log('✅ Supabase מוגדר ומוכן לשימוש');
+        } else {
+            console.log('⚠️ Supabase לא מוגדר - הנתונים יישמרו רק ב-localStorage');
         }
 
         // פונקציה לשליחה ל-Supabase
@@ -694,22 +693,46 @@
             }
 
             try {
-                const { createClient } = supabase;
-                const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-                
-                const { data, error } = await supabaseClient
-                    .from('luxury_properties')
-                    .insert([propertyData]);
+                // יצירת חיבור Supabase
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/luxury_properties`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        owner_name: propertyData.ownerName,
+                        phone: propertyData.phone,
+                        email: propertyData.email || null,
+                        property_name: propertyData.propertyName || null,
+                        region: propertyData.region,
+                        property_type: propertyData.propertyType,
+                        room_count: propertyData.roomCount,
+                        target_audience: propertyData.targetAudience,
+                        price_range: propertyData.priceRange || null,
+                        capacity: propertyData.capacity ? parseInt(propertyData.capacity) : null,
+                        availability: propertyData.availability || null,
+                        experience: propertyData.experience || null,
+                        amenities: propertyData.amenities ? propertyData.amenities.join(',') : '',
+                        additional_info: propertyData.additionalInfo || null,
+                        urgency: propertyData.urgency || null,
+                        submission_date: propertyData.submissionDate,
+                        status: propertyData.status,
+                        source: propertyData.source,
+                        ip_address: propertyData.ipAddress
+                    })
+                });
 
-                if (error) {
-                    console.error('שגיאה בשמירה ל-Supabase:', error);
-                    return false;
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
-                console.log('נתונים נשמרו בהצלחה ל-Supabase:', data);
+                console.log('נתונים נשמרו בהצלחה ל-Supabase');
                 return true;
             } catch (error) {
-                console.error('שגיאה בחיבור ל-Supabase:', error);
+                console.error('שגיאה בשמירה ל-Supabase:', error);
                 return false;
             }
         }
